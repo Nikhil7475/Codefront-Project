@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Flow",
+  "version": "1.0",
+  "description": "Uses Gemini AI to filter YouTube Live Chat for questions, notes, and educational content.",
+
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+
+  "action": {
+    "default_title": "Open Class Focus Panel"
+  },
+
+  "permissions": [
+    "storage",
+    "sidePanel"
+  ],
+
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ]
+}

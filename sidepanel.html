@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Focus Flow</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- VERTICAL NAV -->
+    <aside class="sidebar">
+      <div class="logo">Focus<br>Flow</div>
+
+      <div class="nav-item active" data-view="chat">💬 Live</div>
+      <div class="nav-item" data-view="summary">📝 Summary</div>
+      <div class="nav-item" data-view="timeline">🕒 Timeline</div>
+      <div class="nav-item" data-view="formula">📐 Formula</div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <!-- LIVE CHAT -->
+      <section id="view-chat" class="view active">
+        <div class="sub-tabs">
+          <button class="sub-tab active" data-filter="ALL">All</button>
+          <button class="sub-tab" data-filter="QUESTION">Questions</button>
+          <button class="sub-tab" data-filter="NOTE">Notes</button>
+        </div>
+
+        <div id="feed">
+          <div class="empty-state">Waiting for live chat…</div>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section id="view-summary" class="view">
+        <h3>📘 Video Summary</h3>
+
+        <ul class="nice-list">
+          <li><strong>Purpose of the Video:</strong> Beginner-friendly introduction to C++ covering syntax, logic, and foundational programming concepts.</li>
+          <li><strong>What is C++:</strong> A compiled, high-performance programming language used in games, operating systems, and performance-critical software.</li>
+          <li><strong>How C++ Works:</strong> Source code is written, compiled into machine code, and executed by the system.</li>
+          <li><strong>Program Structure:</strong> Execution begins from <code>main()</code>; headers like <code>&lt;iostream&gt;</code> enable input/output.</li>
+          <li><strong>Variables & Data Types:</strong> Data is stored using types like <code>int</code>, <code>double</code>, <code>char</code>, and <code>bool</code>.</li>
+          <li><strong>Constants:</strong> The <code>const</code> keyword prevents values from being modified.</li>
+          <li><strong>Input & Output:</strong> User input via <code>cin</code>, output via <code>cout</code>.</li>
+          <li><strong>Operators:</strong> Arithmetic, comparison, and logical operators perform calculations and decisions.</li>
+          <li><strong>Type Conversion:</strong> Casting allows conversion between data types, but may cause data loss.</li>
+          <li><strong>Random Numbers:</strong> Generated using standard libraries and proper seeding.</li>
+          <li><strong>Conditionals:</strong> Decision-making using <code>if</code>, <code>else if</code>, and <code>else</code>.</li>
+          <li><strong>Loops:</strong> Repetitive tasks handled using <code>for</code> and <code>while</code> loops.</li>
+          <li><strong>Code Readability:</strong> Comments and clean formatting improve maintainability.</li>
+          <li><strong>Outcome:</strong> Learners can write basic C++ programs and move toward functions and OOP.</li>
+        </ul>
+      </section>
+
+      <!-- TIMELINE -->
+      <section id="view-timeline" class="view">
+        <h3>🕒 Video Timeline</h3>
+
+        <div class="timeline">
+          <div><span>00:00</span> Introduction to C++ and learning objectives</div>
+          <div><span>02:30</span> How C++ programs work (compiler & execution)</div>
+          <div><span>06:30</span> Setting up the development environment</div>
+          <div><span>10:30</span> Writing the first C++ program</div>
+          <div><span>14:30</span> Variables and naming rules</div>
+          <div><span>18:30</span> Primitive data types</div>
+          <div><span>22:30</span> Constants and immutability</div>
+          <div><span>25:30</span> User input using <code>cin</code></div>
+          <div><span>29:30</span> Arithmetic operators</div>
+          <div><span>33:30</span> Type casting and conversions</div>
+          <div><span>37:30</span> Random number generation</div>
+          <div><span>41:30</span> Comments and clean code</div>
+          <div><span>46:30</span> Conditional statements</div>
+          <div><span>52:30</span> Loops and repetition</div>
+          <div><span>56:30</span> Common mistakes & best practices</div>
+          <div><span>59:00</span> Summary and next steps</div>
+        </div>
+      </section>
+
+      <!-- FORMULA -->
+      <section id="view-formula" class="view">
+        <h3>📐 C++ Formula Sheet</h3>
+
+        <pre class="formula-box">
+• Program Flow
+  Write → Compile → Execute
+
+• Program Structure
+  #include <iostream>
+  int main() { return 0; }
+
+• Data Types
+  int     → integers
+  double  → decimals
+  char    → characters
+  bool    → true / false
+
+• Variables
+  type name = value;
+
+• Constants
+  const type name = value;
+
+• Input / Output
+  cin  → input
+  cout → output
+
+• Operators
+  +  -  *  /  %
+  ==  !=  >  <  >=  <=
+  &&  ||  !
+
+• Type Casting
+  (type)value
+
+• Conditionals
+  if (condition) { }
+  else { }
+
+• Loops
+  for(init; cond; inc) { }
+  while(cond) { }
+
+• Random Numbers
+  srand(time(0));
+  rand();
+
+• Comments
+  // single line
+  /* multi line */
+
+• Best Practices
+  ✔ Use const
+  ✔ Avoid magic numbers
+  ✔ Keep code readable
+  ✔ Practice regularly
+        </pre>
+      </section>
+
+      <!-- SETTINGS -->
+      <footer class="settings">
+        <details>
+          <summary>⚙️ API Key</summary>
+          <input id="api-key" type="password" placeholder="Enter Gemini API Key">
+          <button id="save-key">Save</button>
+        </details>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
