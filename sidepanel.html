@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Flow</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">Focus<br>Flow</div>
+
+      <nav class="nav-menu">
+        <div class="nav-item active" data-view="chat">
+          <span class="icon">💬</span>
+          <span class="label">Live</span>
+        </div>
+        <div class="nav-item" data-view="summary">
+          <span class="icon">📝</span>
+          <span class="label">Summary</span>
+        </div>
+        <div class="nav-item" data-view="timeline">
+          <span class="icon">🕒</span>
+          <span class="label">Timeline</span>
+        </div>
+        <div class="nav-item" data-view="formula">
+          <span class="icon">📐</span>
+          <span class="label">Formula</span>
+        </div>
+        
+        <div class="nav-spacer"></div>
+        
+        <div class="nav-item" id="settings-toggle">
+          <span class="icon">⚙️</span>
+          <span class="label">Key</span>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <!-- VIEW: LIVE CHAT -->
+      <section id="view-chat" class="view active">
+        <div class="sticky-header">
+          <h2>💬 Live Class Filter</h2>
+          
+          <div class="control-bar">
+            <button id="toggleChatBtn" class="primary-btn">🔴 Start Monitoring</button>
+            <div id="chat-status" class="status-text">Ready</div>
+          </div>
+
+          <div class="sub-tabs">
+            <button class="sub-tab active" data-filter="ALL">All</button>
+            <button class="sub-tab" data-filter="QUESTION">Questions</button>
+            <button class="sub-tab" data-filter="NOTE">Notes</button>
+          </div>
+        </div>
+
+        <div class="scroll-container">
+          <div id="feed" class="feed-container">
+            <div class="empty-state">
+              <div class="empty-icon">👋</div>
+              <p>Click "Start Monitoring" to filter the chat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW: SUMMARY -->
+      <section id="view-summary" class="view">
+        <div class="sticky-header">
+          <h2>📘 Video Summary</h2>
+          <button id="analyzeBtn" class="primary-btn">✨ Analyze Video</button>
+          <div id="analyze-status" class="status-text">Ready to analyze</div>
+        </div>
+        <div class="scroll-container padding-box">
+          <div id="summary-content">
+            <div class="empty-state">
+              <p>Generate a summary using Gemini 2.0 Flash.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW: TIMELINE -->
+      <section id="view-timeline" class="view">
+        <div class="sticky-header">
+          <h2>🕒 Smart Timeline</h2>
+        </div>
+        <div class="scroll-container padding-box">
+          <div id="timeline-content">
+            <div class="empty-state">No timeline yet.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW: FORMULA -->
+      <section id="view-formula" class="view">
+        <div class="sticky-header">
+          <h2>📐 Formulas & Notes</h2>
+        </div>
+        <div class="scroll-container padding-box">
+          <div id="formula-content" class="formula-box">
+            <div class="empty-state">No notes yet.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETTINGS MODAL -->
+      <div id="settings-panel" class="settings-panel hidden">
+        <h3>Settings</h3>
+        <label>Gemini API Key</label>
+        <input id="api-key" type="password" placeholder="Paste API Key here...">
+        <button id="save-key">Save Key</button>
+        <div id="key-status"></div>
+      </div>
+
+      <!-- Hidden Storage -->
+      <div id="rawTranscript" style="display:none;"></div>
+
+    </main>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

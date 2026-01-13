@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Flow",
+  "version": "2.8",
+  "description": "YouTube AI Analyst & Live Chat Filter. Includes Chat Filtering features.",
+  "permissions": ["sidePanel", "scripting", "activeTab", "storage"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Focus Flow"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
