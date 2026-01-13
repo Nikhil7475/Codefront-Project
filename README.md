@@ -46,7 +46,7 @@ Online learning on platforms like YouTube is often drowning in digital noise. St
 ## 🛠️ Technical Implementation
 * **Manifest Version:** V3
 * **Architecture:** Chrome Side Panel
-* **Frontend:** HTML5, CSS3, Vanilla JavaScript
+* **Frontend:** HTML5, CSS3, JavaScript
 * **Backend/AI:** Google Gemini API
 * **Permissions:** `sidePanel`, `scripting`, `activeTab`, `storage`
 
