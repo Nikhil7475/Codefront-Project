@@ -1,112 +1,96 @@
-#Changed UI a bit.
 
-Focus Flow AI 🎓🚀
-
-Cutting the Noise, Enhancing the Learning.
-
-Focus Flow is a powerful Chrome Extension that transforms any YouTube video—especially live classes—into a focused, interactive learning environment. It uses Google's Gemini AI to filter out spam from live chats, summarize video content, generate formula sheets, and create smart timelines.
-
-🚩 The Problem
-
-Online learning is drowning in digital noise:
-
-Live Stream Chaos: In live classes, critical academic queries are instantly buried by a flood of spam, emojis, and irrelevant chatter.
-
-Wasted Time: Students spend hours scrubbing through long videos to find specific concepts or formulas.
-
-Buried Insights: Valuable peer discussions are lost in the chaos of crowded comment sections.
-
-💡 The Solution: Focus Flow
-
-We built a lightweight, client-side browser extension that acts as a real-time study companion.
-
-Key Features
-
-💬 Live Class Filter (The Spam Killer):
-
-Uses Gemini AI to monitor YouTube Live Chat in real-time.
-
-Automatically filters out spam, greetings, and noise.
-
-Surfaces only Academic Questions and Useful Notes in a clean side panel feed.
-
-📝 Instant Summaries:
-
-Uses Gemini 3 Flash (Preview) to read the video transcript and generate a structured bullet-point summary.
-
-🕒 Smart Timeline:
-
-Generates a clickable "Table of Contents" for the video, allowing students to jump to specific topics instantly.
-
-📐 Formula & Note Extraction:
-
-Automatically identifies and extracts formulas, code snippets, and key definitions into a dedicated cheat sheet.
-
-🛠️ Tech Stack
-
-Frontend: HTML5, CSS3, JavaScript
-
-AI Models:
-
-gemma-3-27b-it: Optimized for high-speed, low-latency text filtering (Live Chat).
-
-Gemini 3 Flash (Preview): Used for deep reasoning and comprehensive analysis (Summaries/Notes).
-
-Platform: Google Chrome Extension (Manifest V3)
-
-APIs: Google Gemini API
-
-🚀 Installation & Setup
-
-Clone the Repository
-
-git clone [https://github.com/your-username/focus-flow.git](https://github.com/your-username/focus-flow.git)
+# 🌊 Focus Flow: From Chaos to Clarity
+> **Team CODEX** | CodeFront 2.0 Hackathon Submission  
+> **Theme:** Cutting the Noise, Enhancing the Learning
 
 
-Get a Gemini API Key
+## 💡 The Problem
+Online learning on platforms like YouTube is often drowning in digital noise. Students face three critical issues:
+1.  **Live Stream Chaos:** Critical academic queries are buried instantly by a flood of spam and irrelevant messages.
+2.  **Wasted Time:** Scrubbing through long videos to find a single key concept.
+3.  **Buried Insights:** Valuable formulas and notes are lost in the chaos of content.
 
-Go to Google AI Studio.
+## 🚀 The Solution
+**Focus Flow** is a comprehensive Chrome Extension that transforms any YouTube video into a focused, interactive learning environment. We leverage **Google Gemini (Flash & Pro models)** to filter noise, summarize content, and curate knowledge in real-time.
 
-Create a free API Key.
+## 🤖 Google Technology Used
+* **Google Gemini API:** The core intelligence engine of our extension. We use Gemini for:
+    * **Real-time Chat Analysis:** Distinguishing between academic doubts and spam.
+    * **Content Synthesis:** Generating concise summaries, timelines, and formula sheets directly from video transcripts.
 
-Load into Chrome
+---
 
-Open Chrome and go to chrome://extensions.
+## ⚙️ Key Features
 
-Enable Developer Mode (top right toggle).
+### ✅ 1. Live Stream Focus (Powered by Gemini)
+* **Smart Filtering:** A real-time side panel that captures live chat messages and filters them instantly.
+* **AI Categorization:** Automatically tags messages as **"Questions"** (academic doubts) or **"Notes"** (useful definitions), discarding spam.
+* **Status:** 🟢 **Fully Functional**
 
-Click Load Unpacked.
+### ✅ 2. Instant Video Summary
+* **Contextual Overview:** Generates a concise, bulleted text summary of the video content.
+* **Interactive:** Fetches the video transcript automatically and processes it via Gemini 3 Flash preview.
+* **Status:** 🟢 **Fully Functional**
 
-Select the folder where you cloned/downloaded this project.
+### ✅ 3. Smart Timeline
+* **Intelligent Navigation:** Automatically generates a timestamped "Table of Contents" (e.g., `[05:20] - Data Structures`).
+* **Click-to-Seek:** Clicking a timestamp instantly jumps the video player to that exact moment.
+* **Status:** 🟢 **Fully Functional**
 
-Use It!
+### ✅ 4. Formula & Notes Extractor
+* **Auto-Extraction:** Automatically detects and extracts mathematical formulas, code snippets, and important definitions into a clean "Cheat Sheet" format.
+* **Status:** 🟢 **Fully Functional**
 
-Open any YouTube video (or Live Stream).
+---
 
-Click the Focus Flow icon in your toolbar (pin it for easy access).
+## 🛠️ Technical Implementation
+* **Manifest Version:** V3
+* **Architecture:** Chrome Side Panel
+* **Frontend:** HTML5, CSS3, Vanilla JavaScript
+* **Backend/AI:** Google Gemini API
+* **Permissions:** `sidePanel`, `scripting`, `activeTab`, `storage`
 
-Open the side panel.
+### File Structure
+* `manifest.json`: Configuration for Side Panel and permissions.
+* `sidepanel.html` & `sidepanel.js`: The core application logic. It handles the API calls to Gemini and updates the UI.
+* `background.js`: Manages the extension lifecycle and ensures the side panel opens only on YouTube.
+* `styles.css`: Custom styling for a clean, dark-mode inspired UI.
 
-Paste your API Key in the settings (Gear icon).
+---
 
-Click "Start Monitoring" for live chat or "Analyze Video" for summaries.
+## 📥 Installation & Setup
 
-📂 Project Structure
+### Prerequisites
+1.  **Google Chrome Browser**
+2.  **Google Gemini API Key**: You need a free API key from [Google AI Studio](https://aistudio.google.com/).
 
-focus-flow/
-├── manifest.json      # Extension configuration & permissions
-├── sidepanel.html     # The main UI of the tool
-├── sidepanel.js       # Core logic (AI calls, DOM manipulation)
-├── background.js      # Service worker for Chrome events
-├── styles.css         # Styling for the Focus Flow UI
-└── icons/             # App icons
+### Steps to Run Locally
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/Nikhil7475/Codefront-Project.git](https://github.com/Nikhil7475/Codefront-Project.git)
+    ```
+2.  **Load into Chrome**
+    * Open Chrome and navigate to `chrome://extensions/`.
+    * Toggle **Developer mode** (top right corner).
+    * Click **Load unpacked**.
+    * Select the `Codefront-Project` folder containing `manifest.json`.
+3.  **Configure API Key**
+    * Open a YouTube video.
+    * Click the **Focus Flow extension icon** in the toolbar to open the Side Panel.
+    * Click the **Settings (⚙️)** icon in the bottom navigation.
+    * Paste your **Gemini API Key** and click **Save Key**.
 
+### How to Use
+1.  **For Live Chat Filtering:** Open a YouTube Live Stream, open the Focus Flow panel, and click **🔴 Start Monitoring**.
+2.  **For Summaries/Notes:** Open any regular YouTube video with captions/transcript available, go to the **Summary** or **Formula** tab, and click **✨ Analyze Video**.
 
-👥 Team CODEX
+---
 
-Nikhil Dubey
+## 👨‍💻 Team CODEX
+* **Nikhil Dubey**
+* **Arpit Raj**
+* **Mayank Verma**
 
-Arpit Raj
+---
 
-Mayank Verma
-
+*Built with ❤️ for CodeFront 2.0*
