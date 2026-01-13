@@ -29,7 +29,7 @@ Online learning on platforms like YouTube is often drowning in digital noise. St
 
 ### ✅ 2. Instant Video Summary
 * **Contextual Overview:** Generates a concise, bulleted text summary of the video content.
-* **Interactive:** Fetches the video transcript automatically and processes it via Gemini 3 Flash preview.
+* **Interactive:** Fetches the video transcript automatically and processes it via Gemini.
 * **Status:** 🟢 **Fully Functional**
 
 ### ✅ 3. Smart Timeline
