@@ -1,82 +1,112 @@
-#Please do visit once again before final evaluation the secondary features mentioned are just about to be completed!!
+#Changed UI a bit.
 
-# 🌊 Focus Flow: From Chaos to Clarity
-> **Team CODEX** | CodeFront 2.0 Hackathon Submission  
-> **Theme:** Cutting the Noise, Enhancing the Learning
+Focus Flow AI 🎓🚀
+
+Cutting the Noise, Enhancing the Learning.
+
+Focus Flow is a powerful Chrome Extension that transforms any YouTube video—especially live classes—into a focused, interactive learning environment. It uses Google's Gemini AI to filter out spam from live chats, summarize video content, generate formula sheets, and create smart timelines.
+
+🚩 The Problem
+
+Online learning is drowning in digital noise:
+
+Live Stream Chaos: In live classes, critical academic queries are instantly buried by a flood of spam, emojis, and irrelevant chatter.
+
+Wasted Time: Students spend hours scrubbing through long videos to find specific concepts or formulas.
+
+Buried Insights: Valuable peer discussions are lost in the chaos of crowded comment sections.
+
+💡 The Solution: Focus Flow
+
+We built a lightweight, client-side browser extension that acts as a real-time study companion.
+
+Key Features
+
+💬 Live Class Filter (The Spam Killer):
+
+Uses Gemini AI to monitor YouTube Live Chat in real-time.
+
+Automatically filters out spam, greetings, and noise.
+
+Surfaces only Academic Questions and Useful Notes in a clean side panel feed.
+
+📝 Instant Summaries:
+
+Uses Gemini 3 Flash (Preview) to read the video transcript and generate a structured bullet-point summary.
+
+🕒 Smart Timeline:
+
+Generates a clickable "Table of Contents" for the video, allowing students to jump to specific topics instantly.
+
+📐 Formula & Note Extraction:
+
+Automatically identifies and extracts formulas, code snippets, and key definitions into a dedicated cheat sheet.
+
+🛠️ Tech Stack
+
+Frontend: HTML5, CSS3, JavaScript
+
+AI Models:
+
+gemma-3-27b-it: Optimized for high-speed, low-latency text filtering (Live Chat).
+
+Gemini 3 Flash (Preview): Used for deep reasoning and comprehensive analysis (Summaries/Notes).
+
+Platform: Google Chrome Extension (Manifest V3)
+
+APIs: Google Gemini API
+
+🚀 Installation & Setup
+
+Clone the Repository
+
+git clone [https://github.com/your-username/focus-flow.git](https://github.com/your-username/focus-flow.git)
 
 
-## 💡 The Problem
-Online learning on platforms like YouTube is often drowning in digital noise. Students face three critical issues:
-1.  **Live Stream Chaos:** Critical academic queries are buried instantly by a flood of spam and irrelevant messages.
-2.  **Wasted Time:** Scrubbing through long videos to find a single key concept.
-3.  **Buried Insights:** Valuable formulas and notes are lost in the chaos of content.
+Get a Gemini API Key
 
-## 🚀 The Solution
-**Focus Flow** is a Chrome Extension that transforms any YouTube video into a focused, interactive learning environment. We leverage **Google Gemini** to filter noise and curate knowledge in real-time.
+Go to Google AI Studio.
 
-## 🤖 Google Technology Used
-* **Google Gemini API:** The core intelligence engine of our extension. We use Gemini to analyze live chat streams in real-time, intelligently distinguishing between academic doubts and general chatter/spam.
+Create a free API Key.
 
----
+Load into Chrome
 
-## ⚙️ Key Features
+Open Chrome and go to chrome://extensions.
 
-### ✅ 1. Live Stream Focus (Powered by Gemini)
-* **Smart Filtering:** A real-time side panel that filters out spam and shows only valuable academic queries.
-* **AI-Driven:** Uses Google Gemini to contextually understand and curate the chat feed.
-* **Status:** 🟢 **Fully Functional & API Integrated**
+Enable Developer Mode (top right toggle).
 
-### 🚧 2. Intelligent Learning Suite (UI Demonstration)
-* **Instant Summaries:** A concise text overview of the video content.
-* **Smart Timeline:** A timestamped "Table of Contents" to navigate complex topics.
-* **Formula Sheet:** Automatically extracts formulas and short notes.
-* **Status:**  **Frontend Prototype** (Demonstrates the vision for the full product ecosystem).
+Click Load Unpacked.
 
----
+Select the folder where you cloned/downloaded this project.
 
-## 🛠️ Technical Implementation
-* **Manifest Version:** V3
-* **Architecture:** Chrome Side Panel API
-* **Frontend:** HTML5, CSS3, JavaScript
-* **Backend/AI:** Google Gemini API
+Use It!
 
-### File Structure
-* `manifest.json`: Configuration and permissions (Side Panel, ActiveTab, Scripting).
-* `sidepanel.html` & `sidepanel.js`: The core UI and logic for the Gemini API integration.
-* `content.js`: Handles interactions with the YouTube chat container.
-* `background.js`: Manages extension lifecycle events.
+Open any YouTube video (or Live Stream).
 
----
+Click the Focus Flow icon in your toolbar (pin it for easy access).
 
-## 📥 Installation & Setup
+Open the side panel.
 
-### Prerequisites
-* Google Chrome Browser
-* A Google Gemini API Key (Get it from [Google AI Studio](https://aistudio.google.com/))
+Paste your API Key in the settings (Gear icon).
 
-### Steps to Run locally
-1.  **Clone the Repository**
-2.  **Load into Chrome**
-    * Open Chrome and navigate to `chrome://extensions/`.
-    * Toggle **Developer mode** (top right corner).
-    * Click **Load unpacked**.
-    * Select the `Codefront-Project` folder.
-3.  **enter the API key in space provided at bottom of sidepanel interface**
+Click "Start Monitoring" for live chat or "Analyze Video" for summaries.
 
-### How to Use
-1.  Open any YouTube video (specifically a Live Stream for the Chat feature).
-2.  Click the **Focus Flow extension icon** in the toolbar (or pin it for easy access).
-3.  The Side Panel will open.
-4.  Select the **"Live"** tab to see Gemini filter the chat in real-time!
-5.  Select Live chat in youtube chat section 
+📂 Project Structure
 
----
+focus-flow/
+├── manifest.json      # Extension configuration & permissions
+├── sidepanel.html     # The main UI of the tool
+├── sidepanel.js       # Core logic (AI calls, DOM manipulation)
+├── background.js      # Service worker for Chrome events
+├── styles.css         # Styling for the Focus Flow UI
+└── icons/             # App icons
 
-## 👨‍💻 Team CODEX
-* **Nikhil Dubey**
-* **Arpit Raj**
-* **Mayank Verma**
 
----
+👥 Team CODEX
 
-*Built with ❤️ for CodeFront 2.0*
+Nikhil Dubey
+
+Arpit Raj
+
+Mayank Verma
+
