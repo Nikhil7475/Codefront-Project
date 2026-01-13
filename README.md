@@ -1,3 +1,5 @@
+#Please do visit once again before final evaluation the secondary features mentioned are just about to be completed!!
+
 # 🌊 Focus Flow: From Chaos to Clarity
 > **Team CODEX** | CodeFront 2.0 Hackathon Submission  
 > **Theme:** Cutting the Noise, Enhancing the Learning
